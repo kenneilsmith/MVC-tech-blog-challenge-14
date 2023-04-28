@@ -31,11 +31,11 @@ app.use(express.urlencoded({ extended: true }))
 
 
 // set up session for the app
-app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: true,
-}))
+// app.use(session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: true,
+// }))
 
 // Load all routes from the root
 app.use('/', [publicController, authController, apiController, postController, commentController, userController])
