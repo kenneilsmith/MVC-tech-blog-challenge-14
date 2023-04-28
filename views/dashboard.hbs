@@ -1,0 +1,39 @@
+{{!-- {{#if username}}
+<a href='/newpost'>Make a post</a>
+{{/if}}
+
+<section id="posts">
+    {{#each post}}
+    <div id="post"><a class="postlink" href="/thread/{{this.id}}">
+            <div id="postheader">
+                <h5>Category:{{this.category.category_name}}</h5>
+                <h3>{{this.title}}</h3>
+                <h5>posted by: {{this.user.username}}</h5>
+            </div>
+            <p>{{this.content}}</p>
+            <div id="postfooter">
+                <h5>posted on: {{this.createdAt}}</h5>
+                <h5>updated on: {{this.updatedAt}}</h5>
+        </a></div>
+    {{/each}}
+</section> --}}
+
+<section id="posts">
+    {{#each post}}
+    <div id="post">
+
+        <div class="post">
+            <h2 class="post-title">{{this.title}}</h2>
+            <p class="post-content">{{this.content}}</p>
+
+        </div>
+
+        <div id="postfooter">
+            <h5>{{this.user.username}} {{this.createdAt}}</h5>
+
+            <a class="post-readmore" href="/post/{{this.id}}">read more...</a>
+            <a class="post-readmore" href="/newcomment">comment</a>
+
+        </div>
+        {{/each}}
+</section>

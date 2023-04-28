@@ -1,0 +1,21 @@
+<section id="posts">
+    {{#each post}}
+    <div id="post">
+
+        <div class="post">
+            <h2 class="post-title">{{this.title}}</h2>
+            <p class="post-content">{{this.content}}</p>
+
+        </div>
+
+        <div id="postfooter">
+            <h5>{{this.user.username}} {{this.createdAt}}</h5>
+            <h5>------Comments---------</h5>
+            {{#each comments}}
+            <h5>{{this.comment}} by: {{this.user.username}}</h5>
+            {{/each}}
+            <a class="post-readmore" href="/post/{{this.id}}">read more...</a>
+            <a class="post-readmore" href="/newcomment">comment</a>
+        </div>
+        {{/each}}
+</section>
