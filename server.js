@@ -43,9 +43,11 @@ app.use('/', [publicController, authController, apiController, postController, c
 
 // Start the server so that it can begin listening to client requests.
 db.sync().then(() => {
-    app.listen(PORT, () => {
+    app.listen(process.env.PORT || PORT, () => {
         console.log(`App listening on port ${PORT}!`)
     })
+}).catch(err => {
+    console.log(err)
 })
 
 
