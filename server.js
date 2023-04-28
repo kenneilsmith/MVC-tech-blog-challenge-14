@@ -1,6 +1,6 @@
 require("dotenv").config()
 const express = require("express")
-const PORT = process.env.PORT || 3000
+PORT = process.env.PORT || 3000
 const session = require("express-session")
 const { apiController, postController, userController, commentController, authController, publicController } = require("./controllers")
 const db = require("./config/connection")
